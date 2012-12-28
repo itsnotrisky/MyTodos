@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/form_task" />
+
+	<EditText
+	    android:id="@+id/form_task"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="@string/form_task" />
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	    
+		<EditText
+		    android:id="@+id/text_form_deadline"
+		    android:layout_width="234dp"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:hint="@string/form_deadline"
+	        android:clickable="false" 
+	        android:cursorVisible="false" 
+	        android:focusable="false" 
+	        android:focusableInTouchMode="false" />
+	
+		<Button
+		    android:id="@+id/button_form_deadline"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/form_deadline" />
+	
+		<DatePicker
+		    android:id="@+id/form_deadline"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="invisible" />
+	</LinearLayout>
+	
+	<Button android:id="@+id/form_confirm" 
+	  android:text="@string/form_confirm"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+</LinearLayout>

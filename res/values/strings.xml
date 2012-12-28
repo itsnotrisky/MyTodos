@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">MyTodos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_my_todos">MyTodos</string>
+    <string name="buttonStart">Start</string>
+    <string name="no_todos">no todos</string>
+    <string name="menu_insert">Add Todo</string>
+    <string name="menu_delete">Delete</string>
+    <string name="form_task">Task</string>
+    <string name="form_deadline">Deadline</string>
+    <string name="form_confirm">Confirm</string>
+    <string name="checked">checked</string>
+    <string name="menu_edit">Edit</string>
+
+</resources>
