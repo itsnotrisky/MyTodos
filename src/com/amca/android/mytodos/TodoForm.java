@@ -16,8 +16,9 @@
 
 package com.amca.android.mytodos;
 
+import java.util.Calendar;
 import java.util.Date;
-import android.app.Activity;
+import com.amca.android.mytodos.customwindow.ActivityWindow;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -28,7 +29,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class TodoForm extends Activity {
+public class TodoForm extends ActivityWindow {
 	private static final int ACTIVITY_CREATE=0;
     private static final int ACTIVITY_EDIT=1;
     private static final int DATE_DIALOG_ID = 999;
@@ -44,7 +45,7 @@ public class TodoForm extends Activity {
 	private int day;
 	
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.todo_form);
         setTitle(R.string.menu_edit);
@@ -114,7 +115,11 @@ public class TodoForm extends Activity {
 		switch (id) {
 		case DATE_DIALOG_ID:
 		   // set date picker as current date
-		   return new DatePickerDialog(this, datePickerListener, year, month,day);
+			final Calendar c = Calendar.getInstance();
+			year = c.get(Calendar.YEAR);
+			month = c.get(Calendar.MONTH);
+			day = c.get(Calendar.DAY_OF_MONTH);
+		   return new DatePickerDialog(this, datePickerListener, year, month, day);
 		}
 		return null;
 	}
